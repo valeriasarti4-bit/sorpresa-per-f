@@ -29,7 +29,7 @@ if 'step' not in st.session_state:
 if st.session_state.step == 1:
     st.title("🔒 Area ad Alto Rischio 🔒")
     st.write("### Attenzione Fabio! ⚠️")
-    st.write("Il contenuto potrebbe causare annebbiamento dei sensi. Sei pronto?")
+    st.write("Il contenuto potrebbe causare infarto, convulsioni, annebbiamento dei sensi. Sei pronto?")
     
     if st.button('Entra a tuo rischio e pericolo... 🔥'):
         st.session_state.step = 1.5
@@ -41,26 +41,28 @@ elif st.session_state.step == 1.5:
     st.info("Nessuna mia foto nuda qui dentro. Mi spiace deluderti! 😂")
     st.write("Però c'è qualcosa di dolce che ti aspetta... 🍬")
     
-    if st.button('Ok, proseguiamo... 🙄'):
+    if st.button('Ok,superiamo la delusione e proseguiamo... 🙄'):
         st.session_state.step = 2
         st.rerun()
 
 # --- STEP 2 ---
 elif st.session_state.step == 2:
     st.title("🌹 La Proposta Indecente 🌹")
-    st.write("### Fabio, vuoi essere il mio Valentino? 🍒")
+    st.write("### Fabio, vuoi essere il mio Valentino? (E magari anche il mio dessert?) 🍒")
     
     col1, col2 = st.columns(2)
     with col1:
-        if st.button('SÌ, assolutamente! 😍'):
+        if st.button('SÌ, non vedo l\'ora! 😍'):
             st.session_state.step = 3
             st.rerun()
     with col2:
         if st.button('No... 🤔'):
             messaggi_no = [
-                "Errore: Fabio non può dire di no.❌",
-                "Input non valido. Il server accetta solo: 'Sì'! 🙏",
+                "Errore: Il tasto 'No' è stato disattivato per eccesso di sex appeal della richiedente 👄",
+                "Riprova... ma con più amore. 😂",
+                "Input non valido. Il server accetta solo: 'Sì' o 'Sì, ti prego!' 🙏",
                 "Il tasto 'No' è rotto. È un segno del destino! 😂",
+                "Ops! Se premi 'No' perdi il diritto al massaggio speciale. Vuoi davvero rischiare? 💣",
                 "Errore 69: Autorizzazione negata 🚫"
             ]
             st.error(random.choice(messaggi_no))
@@ -69,7 +71,7 @@ elif st.session_state.step == 2:
 elif st.session_state.step == 3:
     st.balloons()
     st.title("🎉 OTTIMA SCELTA! 🎉")
-    st.write("### Hai sbloccato il pacchetto 'VIP' 🥂")
+    st.write("### Hai sbloccato il pacchetto 'Vale San Valentino VIP' 🥂")
     
     st.image("https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHJueGZ3bmZqZzR4ZzR4ZzR4ZzR4ZzR4ZzR4ZzR4ZzR4ZzR4JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCBmcm9tX2dpZl9zZWFyY2gmY3Q9Zw/l41lH4ADRtAYnGsLe/giphy.gif")
     
@@ -77,11 +79,15 @@ elif st.session_state.step == 3:
     st.write("### 🎁 Scegli il tuo premio:")
     
     premio = st.radio("", 
-        ["Maratona 🔞",
+        ["Maratona di San Valentino: una notte intera con me che ti faccio rimpiangere di non volermi come morosa 🔞",
          "Un'ora di coccole e relax 🧸",
          "Un massaggio 'full optional' 🧖‍♂️",
+         "Abbonamento alla Friendzone (Scaduto): Una serata in cui facciamo i 'fidanzatini' per finta. 👩‍❤️‍💋‍👨   Mi tieni la mano, mi porti a cena e mi dici quanto sono bella. 💅 ",
          "Tutte le precedenti"])
     
-    if st.button('Conferma il premio 🎟️'):
-        st.success(f"Prenotazione confermata: **{premio}**!")
-        st.write("💌 *Spero tu abbia molta energia... ci vediamo dopo.* 😉")
+     if st.button('Conferma il premio 🎟️'):
+        st.success(f"Prenotazione confermata per: **{premio}**! A tra poco, splendore. 😉")
+        st.write("💌 *P.S. Spero tu abbia molta energia quel giorno...*")
+
+    if st.button('Rivedi i palloncini 🎈'):
+        st.rerun()
