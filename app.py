@@ -78,16 +78,19 @@ elif st.session_state.step == 3:
     st.write("---")
     st.write("### 🎁 Scegli il tuo premio:")
     
-    premio = st.radio("", 
-        ["Maratona di San Valentino: una notte intera con me che ti faccio rimpiangere di non volermi come morosa 🔞",
-         "Un'ora di coccole e relax 🧸",
-         "Un massaggio 'full optional' 🧖‍♂️",
-         "Abbonamento alla Friendzone (Scaduto): Una serata in cui facciamo i 'fidanzatini' per finta. 👩‍❤️‍💋‍👨   Mi tieni la mano, mi porti a cena e mi dici quanto sono bella. 💅 ",
-         "Tutte le precedenti"])
+   opzioni = [
+        "Maratona: Una notte intera di me che ti faccio rimpiangere di non volermi come morosa 🔞",
+        "Grattini e relax totale: solo io che ti coccolo 🧸",
+        "Un massaggio 'full optional' 🧖‍♂️💎👑",
+        "Abbonamento Friendzone (Scaduto): facciamo i 'fidanzatini' per finta 👩‍❤️‍💋‍👨 mi tieni la mano, mi porti a cena e mi dici quanto sono bella 💅",
+        "Tutte le precedenti (Coraggioso! 😈)"
+    ]
     
-     if st.button('Conferma il premio 🎟️'):
-        st.success(f"Prenotazione confermata: **{premio}**!")
-        st.write("💌 *Spero tu abbia molta energia... ci vediamo dopo.* 😉")
+    scelta = st.radio("Cosa desideri?", opzioni)
+    
+    if st.button('CONFERMA IL PREMIO 🎟️'):
+        st.success(f"Ottima scelta! Prenotato: {scelta}")
+        st.write("💌 *Spero tu abbia molta energia... ci vediamo dopo.* 😉🫦")
 
     if st.button('Rivedi i palloncini 🎈'):
         st.rerun()
