@@ -1,3 +1,26 @@
+import streamlit as st
+import random
+
+# Configurazione pagina
+st.set_page_config(page_title="Area Riservata Fabio ❤️", page_icon="🌶️", layout="centered")
+
+# CSS Personalizzato per un look più accattivante
+st.markdown("""
+    <style>
+    .stApp {
+        background: linear-gradient(to bottom, #ffeded, #ffffff);
+    }
+    .main-title {
+        color: #ff4b4b;
+        text-align: center;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    .stButton>button {
+        border-radius: 50px;
+        transition: all 0.3s;
+    }
+    .stButton>button:hover {
+        transform: scale(1.05);
         background-color: #ff4b4b !important;
         color: white !important;
     }
@@ -71,3 +94,15 @@ elif st.session_state.step == 3:
     
     premio = st.radio("", 
         ["Maratona di San Valentino: Una notte intera di me che ti faccio rimpiangere di non volermi come morosa 🔞",
+         "Un'ora di grattini e relax totale. Niente pensieri, niente stress, solo io che ti coccolo 🧸 ",
+         "Un massaggio 'full optional' 🧖‍♂️💎👑",
+         "Abbonamento alla Friendzone (Scaduto): Una serata in cui facciamo i 'fidanzatini' per finta. 👩‍❤️‍💋‍👨   Mi tieni la mano, mi porti a cena e mi dici quanto sono bella. 💅 ",
+         "Tutte le precedenti"])
+    
+    if st.button('Conferma il premio 🎟️'):
+        st.success(f"Prenotazione confermata per: **{premio}**! A tra poco, splendore. 😉")
+        st.write("💌 *P.S. Spero tu abbia molta energia quel giorno...*")
+
+    if st.button('Rivedi i palloncini 🎈'):
+        st.rerun()
+
