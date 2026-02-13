@@ -85,7 +85,7 @@ elif st.session_state.step == 3:
          "Abbonamento alla Friendzone (Scaduto): Una serata in cui facciamo i 'fidanzatini' per finta. 👩‍❤️‍💋‍👨   Mi tieni la mano, mi porti a cena e mi dici quanto sono bella. 💅 ",
          "Tutte le precedenti"])
     
-     if st.button('Conferma il premio 🎟️'):
+     if st.button('Conferma il premio'):
         st.success(f"Prenotazione confermata per: **{premio}**! A tra poco, splendore. 😉")
         st.write("💌 *P.S. Spero tu abbia molta energia quel giorno...*")
 
