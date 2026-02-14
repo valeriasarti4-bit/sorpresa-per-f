@@ -4,19 +4,26 @@ import random
 # Configurazione pagina
 st.set_page_config(page_title="Area Riservata Fabio ❤️", page_icon="🌶️")
 
-# CSS semplificato e leggibile (Testo scuro su sfondo chiaro)
+# CSS FORZATO: Sfondo bianco, testo nero e titoli rossi per massima leggibilità
 st.markdown("""
     <style>
     .stApp {
-        background-color: #ffffff;
+        background-color: #ffffff !important;
     }
-    h1, h2, h3, p {
-        color: #1a1a1a !important;
+    .stMarkdown, p, div, label {
+        color: #000000 !important;
+    }
+    h1, h2, h3 {
+        color: #d32f2f !important;
     }
     .stButton>button {
         border-radius: 20px;
-        background-color: #ff4b4b;
-        color: white !important;
+        background-color: #ff4b4b !important;
+        color: #ffffff !important;
+        border: none;
+    }
+    .stWidget label {
+        color: #000000 !important;
     }
     </style>
     """, unsafe_allow_html=True)
@@ -41,7 +48,7 @@ elif st.session_state.step == 1.5:
     st.info("Nessuna mia foto nuda qui dentro. Mi spiace deluderti! 😂")
     st.write("Però c'è qualcosa di dolce che ti aspetta... 🍬")
     
-    if st.button('Ok,superiamo la delusione e proseguiamo... 🙄'):
+    if st.button('Ok, superiamo la delusione e proseguiamo... 🙄'):
         st.session_state.step = 2
         st.rerun()
 
@@ -58,11 +65,10 @@ elif st.session_state.step == 2:
     with col2:
         if st.button('No... 🤔'):
             messaggi_no = [
-                "Errore: Il tasto 'No' è stato disattivato per eccesso di sex appeal della richiedente 👄",
+                "Errore: Il tasto 'No' è disattivato per eccesso di sex appeal 👄",
                 "Riprova... ma con più amore. 😂",
-                "Input non valido. Il server accetta solo: 'Sì' o 'Sì, ti prego!' 🙏",
+                "Input non valido. Il server accetta solo: 'Sì'! 🙏",
                 "Il tasto 'No' è rotto. È un segno del destino! 😂",
-                "Ops! Se premi 'No' perdi il diritto al massaggio speciale. Vuoi davvero rischiare? 💣",
                 "Errore 69: Autorizzazione negata 🚫"
             ]
             st.error(random.choice(messaggi_no))
@@ -78,11 +84,11 @@ elif st.session_state.step == 3:
     st.write("---")
     st.write("### 🎁 Scegli il tuo premio:")
     
-   opzioni = [
+    opzioni = [
         "Maratona: Una notte intera di me che ti faccio rimpiangere di non volermi come morosa 🔞",
         "Grattini e relax totale: solo io che ti coccolo 🧸",
         "Un massaggio 'full optional' 🧖‍♂️💎👑",
-        "Abbonamento Friendzone (Scaduto): facciamo i 'fidanzatini' per finta 👩‍❤️‍💋‍👨 mi tieni la mano, mi porti a cena e mi dici quanto sono bella 💅",
+        "Abbonamento Friendzone (Scaduto): facciamo i 'fidanzatini' per finta 👩‍❤️‍💋‍👨",
         "Tutte le precedenti (Coraggioso! 😈)"
     ]
     
@@ -91,6 +97,7 @@ elif st.session_state.step == 3:
     if st.button('CONFERMA IL PREMIO 🎟️'):
         st.success(f"Ottima scelta! Prenotato: {scelta}")
         st.write("💌 *Spero tu abbia molta energia... ci vediamo dopo.* 😉🫦")
-
+    
+    # RIGA FINALE PER RIVEDERE I PALLONCINI
     if st.button('Rivedi i palloncini 🎈'):
         st.rerun()
