@@ -96,7 +96,7 @@ elif st.session_state.step == 3:
     
     if st.button('CONFERMA IL PREMIO 🎟️'):
         st.success(f"Ottima scelta! Prenotato: {scelta}")
-        st.write("💌 *Spero tu abbia molta energia... ci vediamo dopo.* 😉🫦")
+        st.write("💌 *Spero tu abbia molta energia... a presto splendore!.* 😉")
     
     # RIGA FINALE PER RIVEDERE I PALLONCINI
     if st.button('Rivedi i palloncini 🎈'):
