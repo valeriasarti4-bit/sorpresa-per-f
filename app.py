@@ -88,7 +88,7 @@ elif st.session_state.step == 3:
         "Maratona: Una notte intera di me che ti faccio rimpiangere di non volermi come morosa 🔞",
         "Grattini e relax totale: solo io che ti coccolo 🧸",
         "Un massaggio 'full optional' 🧖‍♂️💎👑",
-        "Abbonamento Friendzone (Scaduto): facciamo i 'fidanzatini' per finta 👩‍❤️‍💋‍👨 mi porti a cena e mi dici quanto sono bella",
+        "Abbonamento Friendzone (Scaduto): facciamo i 'fidanzatini' per finta 👩‍❤️‍💋‍👨 mi porti a cena e mi dici quanto sono bella 💅",
         "Tutte le precedenti (😈)"
     ]
     
